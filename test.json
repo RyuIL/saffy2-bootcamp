@@ -1,0 +1,144 @@
+[
+	{
+		"type": "section",
+        "block_id":"to_cst_message",
+		"text": {
+			"type": "mrkdwn",
+			"text": " {0}님을 위한 추천상품 입니다 XD \n "
+		}
+	},
+	{
+		"type": "context",
+        "block_id":"cotent_info",
+		"elements": [
+			{
+				"type": "mrkdwn",
+				"text": " SC search bot은 쿠팡 과 위메프 상품내용을 제공합니다. "
+			}
+		]
+	},
+	{
+		"type": "divider"
+	},
+
+	{
+		"type": "section",
+		"block_id": "coupang#1",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+	{
+		"type": "section",
+		"block_id": "coupang#2",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+	{
+		"type": "section",
+		"block_id": "coupang#3",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "*더 많은 상품을 보고싶다면 ?* "
+		},
+		"accessory": {
+			"type": "button",
+			"text": {
+				"type": "plain_text",
+				"text": "쿠팡으로 바로가기",
+				"emoji": true
+			},
+			"value": "click_me_123"
+		}
+	},
+	{
+		"type": "divider"
+	},
+
+	{
+		"type": "section",
+		"block_id": "wemakeprice#1",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+	{
+		"type": "section",
+		"block_id": "wemakeprice#2",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+	{
+		"type": "section",
+		"block_id": "wemakeprice#3",
+		"text": {
+			"type": "mrkdwn",
+			"text": "> *<{0}|{1}>* \n 평점 : {2}  \n 가격 : {3} 원 ~"
+		},
+		"accessory": {
+			"type": "image",
+			"image_url": "{0}",
+			"alt_text": "{0}"
+		}
+	},
+
+	{
+		"type": "section",
+		"text": {
+			"type": "mrkdwn",
+			"text": "*더 많은 상품을 보고싶다면 ?* "
+		},
+		"accessory": {
+			"type": "button",
+			"text": {
+				"type": "plain_text",
+				"text": "위메프로 바로가기",
+				"emoji": true
+			},
+			"value": "click_me_123"
+		}
+	},
+	{
+		"type": "divider"
+	}
+
+]
