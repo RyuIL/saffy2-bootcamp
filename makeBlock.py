@@ -4,7 +4,7 @@ import wmp
 import coupang
 
 
-def getTop3(product):
+def getTop3(product, user):
 
     json_data = open('test.json',encoding='UTF8').read()
 
@@ -16,7 +16,7 @@ def getTop3(product):
     # print("-----------------------------------")
     # print(wmp.wmp_search("휴지"))
 
-    json_t[0]['text']['text'].format("유저")
+    json_t[0]['text']['text'] = json_t[0]['text']['text'].format(user)
 
     coupangList = coupang.coupang(product)
     wmpList = wmp.wmp_search(product)

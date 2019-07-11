@@ -5,9 +5,10 @@ from slack.web.classes.blocks import *
 from slackeventsapi import SlackEventAdapter
 
 import makeBlock
+import key
 
-SLACK_TOKEN = 'xoxb-685325156311-691504642295-2rHbrKkK5ja0Qc4jKFLoQbZU'
-SLACK_SIGNING_SECRET = '00d36252a2c5491e3730360c567d154a'
+SLACK_TOKEN = key.TOKEN
+SLACK_SIGNING_SECRET = key.SIGNING
 
 
 app = Flask(__name__)
@@ -46,8 +47,8 @@ def app_mentioned(event_data):
     # my_blocks = [block1, block2, block3]
 
     text = event_data["event"]["text"]
-
-    block = makeBlock.getTop3(text.split()[1])
+    user = event_data["event"]["user"]
+    block = makeBlock.getTop3(text.split()[1], user)
 
     slack_web_client.chat_postMessage(
         channel= event_data["event"]["channel"],

@@ -4,7 +4,7 @@
         "block_id":"to_cst_message",
 		"text": {
 			"type": "mrkdwn",
-			"text": " {0}님을 위한 추천상품 입니다 XD \n "
+			"text": " {0} 님을 위한 추천상품 입니다 XD \n "
 		}
 	},
 	{
@@ -134,7 +134,7 @@
 				"text": "위메프로 바로가기",
 				"emoji": true
 			},
-			"value": "click_me_123"
+			"value": "https://api.slack.com/reference/messaging/blocks"
 		}
 	},
 	{
