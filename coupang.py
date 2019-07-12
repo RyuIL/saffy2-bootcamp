@@ -46,7 +46,7 @@ def coupang(product):
         # print(rating_count)
         # print("http:"+search_product_wrap_img['src'])
 
-        coupang_list.append([name.text, int(price.text.replace(",","")), float(rating), int(rating_count), search_product_link])
+        coupang_list.append([search_product_link, name.text, int(price.text.replace(",","")), float(rating), int(rating_count)])
 
         if(not "gif" in search_product_wrap_img[0]['src']):
             # print(search_product_wrap_img[0]['src'])
