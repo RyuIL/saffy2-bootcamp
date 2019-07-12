@@ -34,6 +34,9 @@ def getTop3(product, user):
     json_t[9]['text']['text'] = json_t[9]['text']['text'].format(wmpList[1][0], wmpList[1][1], wmpList[1][3],wmpList[1][2])
     json_t[10]['text']['text'] = json_t[10]['text']['text'].format(wmpList[2][0], wmpList[2][1], wmpList[2][3],wmpList[2][2])
 
+    json_t[6]['accessory']['url'] = json_t[6]['accessory']['url'].format(product)
+
+    json_t[11]['accessory']['url'] = json_t[11]['accessory']['url'].format(product)
 
     #이미지 주소 입력
     json_t[3]['accessory']['image_url'] = json_t[3]['accessory']['image_url'].format(coupangList[0][-1])

@@ -74,7 +74,8 @@
 				"text": "쿠팡으로 바로가기",
 				"emoji": true
 			},
-			"value": "click_me_123"
+			"value": "click_me_123",
+			"url" : "https://www.coupang.com/np/search?q={0}&channel=recent"
 		}
 	},
 	{
@@ -134,7 +135,8 @@
 				"text": "위메프로 바로가기",
 				"emoji": true
 			},
-			"value": "https://api.slack.com/reference/messaging/blocks"
+			"value": "click_me_123",
+			"url" : "https://search.wemakeprice.com/search?search_keyword={0}"
 		}
 	},
 	{

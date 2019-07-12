@@ -14,7 +14,7 @@ def wmp_search(text):
     output = []
 
     for item in items[:10] :
-        link = "http:" + item["href"]
+        link = "http:" + item["href"] if item["href"].startswith('/') else item["href"]
         title = item.select('div > img')[0]['alt']
         price = item.find('em', class_='num').get_text()
         rank = item.find('i').get_text()
