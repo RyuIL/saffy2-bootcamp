@@ -27,35 +27,37 @@ def coupang(product):
     for searchItem in soup.find_all("li", class_="search-product"):
         price = searchItem.find("strong", class_="price-value")
         name = searchItem.find("div", class_="name")
-        rating = searchItem.find("em", class_="rating")
+        isHaveRating = False
+        if(searchItem.find("em", class_="rating")):
+            rating = searchItem.find("em", class_="rating").text
+            isHaveRating = True
+        else : rating = "0"
         rating_total_count = searchItem.find("span", class_="rating-total-count")
         # search_product_wrap_img = searchItem.find("img", class_="search-product-wrap-img")
         search_product_wrap_img = searchItem.select("dt.image > img.search-product-wrap-img")
         search_product_link = searchItem.find('a', class_="search-product-link")['href']
         search_product_link = "https://www.coupang.com"+search_product_link
-        # print(name.text)
-        # print(price.text)
-        # print(rating.text)
-        if rating_total_count :
-            if "(" in rating_total_count.text or ")" in rating_total_count.text :
-                rating_count = rating_total_count.text.replace("(", "").replace(")", "")
-            else :
-                rating_count = rating_total_count.text
+        print(name.text)
+        print(price.text)
+        print(rating)
+        if isHaveRating:
+            rating_count = rating_total_count.text.replace("(","").replace(")","")
+        else : rating_count = "0"
         # print(rating_count)
         # print("http:"+search_product_wrap_img['src'])
 
-        coupang_list.append([search_product_link, name.text, int(price.text.replace(",","")), float(rating.text), int(rating_count)])
+        coupang_list.append([name.text, int(price.text.replace(",","")), float(rating), int(rating_count), search_product_link])
 
         if(not "gif" in search_product_wrap_img[0]['src']):
             # print(search_product_wrap_img[0]['src'])
-            coupang_list[i].append("http:"+search_product_wrap_img[0]['src'])
+            coupang_list[i].append(search_product_wrap_img[0]['src'])
         else : 
             # print(search_product_wrap_img[0]['data-img-src'])
-            coupang_list[i].append("http:"+search_product_wrap_img[0]['data-img-src'])
+            coupang_list[i].append(search_product_wrap_img[0]['data-img-src'])
 
         # print(coupang_list)
         i+=1
-        if i==10 :
+        if i==20 :
             break
 
         # for item in coupang_list:
