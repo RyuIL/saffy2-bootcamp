@@ -37,9 +37,9 @@ def coupang(product):
         search_product_wrap_img = searchItem.select("dt.image > img.search-product-wrap-img")
         search_product_link = searchItem.find('a', class_="search-product-link")['href']
         search_product_link = "https://www.coupang.com"+search_product_link
-        print(name.text)
-        print(price.text)
-        print(rating)
+        # print(name.text)
+        # print(price.text)
+        # print(rating)
         if isHaveRating:
             rating_count = rating_total_count.text.replace("(","").replace(")","")
         else : rating_count = "0"
